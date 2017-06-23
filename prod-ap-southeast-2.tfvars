@@ -1,0 +1,7 @@
+vpc_id              = "vpc-bb"
+subnet              = "subnet-e"
+r53_id              = "Z3V"
+r53_domain          = "m.nine.ine"
+environment         = "production"
+r53_endpoint_suffix = "ap"
+region              = "ap-southeast-2"
