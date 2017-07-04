@@ -1,7 +1,10 @@
 all: deploy
 
 terraform_version = "0.9.8"
-terraform_url = "https://releases.hashicorp.com/terraform/$(terraform_version)/terraform_$(terraform_version)_linux_amd64.zip"
+os = `echo $(shell uname) | tr A-Z a-z`
+
+terraform_url = "https://releases.hashicorp.com/terraform/$(terraform_version)/terraform_$(terraform_version)_$(os)_amd64.zip"
+
 settings_file = $(TF_VAR_environment)-$(TF_VAR_region).tfvars
 state_bucket = "y-tf-state"
 
